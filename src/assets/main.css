@@ -11,8 +11,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white; /* Optional, for better visibility */
-  padding: 20px; /* Optional, for spacing */
-  border: 1px solid #ccc; /* Optional, for styling */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional, for shadow effect */
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
 }
