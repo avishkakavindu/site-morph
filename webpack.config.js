@@ -6,23 +6,19 @@ module.exports = {
   entry: './src/main.js', // Your entry point
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.min.js', // Output file
-    library: 'MyLibrary', // Makes the script usable globally
+    filename: 'bundle.min.js', // Minified file
+    library: 'SiteMorph', // Makes the script usable globally
     libraryTarget: 'umd', // Universal module definition
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-    ],
   },
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()],
+  },
+  resolve: {
+    alias: {
+      jquery: path.resolve(__dirname, 'node_modules/jquery'),
+      lodash: path.resolve(__dirname, 'node_modules/lodash'),
+      dot: path.resolve(__dirname, 'node_modules/dot'),
+    },
   },
 };
