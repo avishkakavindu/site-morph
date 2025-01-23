@@ -21,4 +21,12 @@ module.exports = {
       dot: path.resolve(__dirname, 'node_modules/dot'),
     },
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
 };
